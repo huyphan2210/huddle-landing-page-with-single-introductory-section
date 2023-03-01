@@ -1,2 +1,133 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(257, 40%, 49%);
+    display: flex;
+    justify-content: center;
+}
+
+    main {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        min-height: 100vh;
+    }
+        .content {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+            .content img {
+                max-width: 60%;
+            }
+            .registerSection {
+                padding: 4rem;
+                font-family: Poppins, sans-serif;
+            }
+                .registerSection h1 {
+                    font-size: 3rem;
+                }
+                .registerSection button{
+                    color: hsl(257, 40%, 49%);
+                    padding: 1rem;
+                    border-radius: 4rem;
+                    border-width: 0;
+                    width: 30%;
+                    text-align: center;
+                }
+                    .registerSection button:hover{
+                        background-color: hsl(300, 69%, 71%);
+                        color: white;
+                        cursor: pointer;
+                    }
+        #logo {
+            width: 30%;
+            max-width: 12rem;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+        }
+        .socialMedias {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            bottom: 2rem;
+            right: 0;
+            width: 9rem;
+        }
+            .socialMedias img {
+                width: 20%;
+                background-color: white;
+                padding: 0.2rem;
+                border-radius: 50%;
+                
+            }
+                .socialMedias img:hover {
+                    cursor: pointer;
+                }
+
+    footer {
+        position: fixed;
+        bottom: 1vh;
+        color: white;
+    }
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: blue; }
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        background-image: url(./images/bg-mobile.svg);
+    }
+    main {
+        margin-block-start: 5vh;
+        width: 80%;
+        flex-direction: column;
+        align-items: normal;
+    }
+        #logo {
+            position: static;
+            width: 40%;
+            margin-block-end: 5rem;
+        }
+
+        .socialMedias {
+            position: static;
+            align-self: center;
+        }
+        .content {
+            flex-direction: column;
+            margin-block-end: 5rem;
+        }
+            .content img {
+                max-width: 100%;
+            }
+
+            .content .registerSection {
+                padding: 0;
+                text-align: center;
+                display: grid;
+                place-items: center;
+            }
+
+            .content .registerSection  h1{
+                font-size: 1.5rem;
+                margin-block-end: 0.5rem;
+            }
+
+            .content .registerSection  button{
+                width: 50%;
+            }
+    
+    footer {
+        position: static;
+    }
+}
